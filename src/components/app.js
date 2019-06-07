@@ -3,9 +3,13 @@ import React, { Component } from 'react';
 export default class App extends Component {
   render() {
     return (
-      <div className='app'>
-        <h1>Angry Libs</h1>
-        <h2>Not the right type of "mad"</h2>
+      <div className='backgroundSkew'>
+        <div className="header">
+          <h1>Angry Libs</h1>
+          <div className="subheader">
+          <h2>Fill out the fields below and click on the generate button to have this app tell you a story. Hopefully, it's a good one.</h2>
+          </div>
+        </div>
       </div>
     );
   }

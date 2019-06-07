@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MadLibsForm from './madlibs_form';
 
 export default class App extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class App extends Component {
           <h2>Fill out the fields below and click on the generate button to have this app tell you a story. Hopefully, it's a good one.</h2>
           </div>
         </div>
+        <MadLibsForm name="Alfred" />
       </div>
     );
   }

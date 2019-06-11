@@ -1,12 +1,10 @@
+@import 'components/madlib_form';
+@import 'header';
+@import 'variables';
+
 html {
     font-size: 62.5%; // 1rem is 10px
 }
-
-$lightGreen: #00CB79;
-$clearBlue: #45B0E5;
-$mainGrey: #CFCFCF;
-$darkGrey: #444444;
-$font-primary: "Montserrat", sans-serif;
 
 *,
 *::after,
@@ -30,34 +28,5 @@ body {
 .app {
     margin-top: 2rem;
     display: grid;
-    justify-items: center;
-}
-
-.backgroundSkew {
-    width: 100vw;
-    height: 700px;
-    background-color: $darkGrey;
-    transform: skewY(-10deg);
-    margin-top: -17rem;
-    padding-top: 17rem;
-    border-bottom: 1rem solid $lightGreen;
-}
-
-.backgroundSkew > * {
-    transform: skewY(10deg);
-}
-
-.header {
-    text-align: center;
-    margin: 20px;
-    padding-top: 46px;
-    color: white;
-    font-weight: 700;
-    font-family: $font-primary;
-}
-
-.subheader {
-    margin-bottom: 46px;
-    color: rgba(255,255,255,0.75);
-    font-size: 15px;
+    justify-content: center;
 }

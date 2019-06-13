@@ -5,6 +5,7 @@ import {
   Card
 } from 'reactstrap';
 import _ from 'lodash';
+import MadLibContent from './madlib_content';
 
 
 function MadLibInput(props) {
@@ -37,13 +38,25 @@ class madLibsForm extends Component {
     this.state = {
       completedForm: false,
       colorOne: '',
+      celebOne: '',
       pluralNounOne: '',
       adjOne: '',
-      celebOne: '',
       adjTwo: '',
       nounOne: '',
       numOne: '',
-      numTwo: ''
+      numTwo: '',
+      pluralNounTwo: '',
+      verbOne: '',
+      adverbOne: '',
+      nounTwo: '',
+      adjThree: '',
+      verbTwo: '',
+      animalOne: '',
+      firstNameOne: '',
+      liquidOne: '',
+      carBrandOne: '',
+      adjFour: '',
+      adverbTwo: ''
     }
   }
 
@@ -65,13 +78,25 @@ class madLibsForm extends Component {
     this.setState({
       completedForm: false,
       colorOne: '',
+      celebOne: '',
       pluralNounOne: '',
       adjOne: '',
-      celebOne: '',
       adjTwo: '',
       nounOne: '',
       numOne: '',
-      numTwo: ''
+      numTwo: '',
+      pluralNounTwo: '',
+      verbOne: '',
+      adverbOne: '',
+      nounTwo: '',
+      adjThree: '',
+      verbTwo: '',
+      animalOne: '',
+      firstNameOne: '',
+      liquidOne: '',
+      carBrandOne: '',
+      adjFour: '',
+      adverbTwo: ''
     });
   }.bind(this);
 
@@ -85,14 +110,29 @@ class madLibsForm extends Component {
     render() {
       this.inputData = [
         {placeholder: 'Color', prop: 'colorOne', state: this.state.colorOne},
+        {placeholder: 'Celebrity', prop: 'celebOne', state: this.state.celebOne},
         {placeholder: 'Noun(Plural)', prop: 'pluralNounOne', state: this.state.pluralNounOne},
         {placeholder: 'Adjective', prop: 'adjOne', state: this.state.adjOne},
-        {placeholder: 'Celebrity', prop: 'celebOne', state: this.state.celebOne},
 
         {placeholder: 'Adjective', prop: 'adjTwo', state: this.state.adjTwo},
         {placeholder: 'Noun', prop: 'nounOne', state: this.state.nounOne},
         {placeholder: 'Number', prop: 'numOne', state: this.state.numOne},
-        {placeholder: 'Number', prop: 'numTwo', state: this.state.numTwo}
+        {placeholder: 'Number', prop: 'numTwo', state: this.state.numTwo},
+
+        {placeholder: 'Noun(Plural)', prop: 'pluralNounTwo', state: this.state.pluralNounTwo},
+        {placeholder: 'Verb', prop: 'verbOne', state: this.state.verbOne},
+        {placeholder: 'Adverb', prop: 'adverbOne', state: this.state.adverbOne},
+        {placeholder: 'Noun', prop: 'nounTwo', state: this.state.nounTwo},
+
+        {placeholder: 'Adjective', prop: 'adjThree', state: this.state.adjThree},
+        {placeholder: 'Verb', prop: 'verbTwo', state: this.state.verbTwo},
+        {placeholder: 'Animal', prop: 'animalOne', state: this.state.animalOne},
+        {placeholder: 'First Name', prop: 'firstNameOne', state: this.state.firstNameOne},
+
+        {placeholder: 'Liquid', prop: 'liquidOne', state: this.state.liquidOne},
+        {placeholder: 'Car Brand', prop: 'carBrandOne', state: this.state.carBrandOne},
+        {placeholder: 'Adjective', prop: 'adjFour', state: this.state.adjFour},
+        {placeholder: 'Adverb', prop: 'adverbTwo', state: this.state.adverbTwo}
       ]
       return (
         <div className="card-wrapper">
@@ -111,6 +151,7 @@ class madLibsForm extends Component {
                 </Col>
               </Row>
             </form>
+            <MadLibContent data={this.state}/>
           </Card>
         </div>
       );

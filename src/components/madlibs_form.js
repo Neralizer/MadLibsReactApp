@@ -56,10 +56,31 @@ class madLibsForm extends Component {
   }
 
   handleSubmit = function(event){
-    console.log(`${this.setState.completedForm}`);
+    console.log(`${this.state.completedForm}`);
     this.setState({completedForm: true});
     event.preventDefault();
   }.bind(this);
+
+  hanldleClick = function(){
+    this.setState({
+      completedForm: false,
+      colorOne: '',
+      pluralNounOne: '',
+      adjOne: '',
+      celebOne: '',
+      adjTwo: '',
+      nounOne: '',
+      numOne: '',
+      numTwo: ''
+    });
+  }.bind(this);
+
+  renderButton = function() {
+    if(this.state.completedForm) {
+      return <a className="clear-button" onClick={this.hanldleClick}>Clear Mad Lib</a>
+    }
+    return <input type="submit" className="generate-button" value="Generate Mad Lib" />
+  }
 
     render() {
       this.inputData = [
@@ -77,18 +98,18 @@ class madLibsForm extends Component {
         <div className="card-wrapper">
           <Card>        
             <form onSubmit={this.handleSubmit} id="madlib-form">  
-            <Row style={{textAlign: "center", color: "white"}}>
-              {
-                _.map(this.inputData, (data,indexKey) => {
-                  return <MadLibInput key={indexKey} index={indexKey + 1} state={data.state} placeholder={data.placeholder} onChange={this.handleChange({inputTitle: data.prop})} />
-                })
+              <Row style={{textAlign: "center", color: "white"}}>
+                {
+                  _.map(this.inputData, (data,indexKey) => {
+                    return <MadLibInput key={indexKey} index={indexKey + 1} state={data.state} placeholder={data.placeholder} onChange={this.handleChange({inputTitle: data.prop})} />
+                  })
                 }
-            </Row>
-            <Row>
-              <Col md="12" className="button-wrapper">
-              <input type="submit" className="generate-button" value="Generate Mad Lib" />
-              </Col>
-            </Row>
+              </Row>
+              <Row>
+                <Col md="12" className="button-wrapper">
+                  {this.renderButton()}
+                </Col>
+              </Row>
             </form>
           </Card>
         </div>

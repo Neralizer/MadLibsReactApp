@@ -35,6 +35,7 @@ class madLibsForm extends Component {
     super(props)
 
     this.state = {
+      completedForm: false,
       colorOne: '',
       pluralNounOne: '',
       adjOne: '',
@@ -54,6 +55,12 @@ class madLibsForm extends Component {
     }.bind(this);
   }
 
+  handleSubmit = function(event){
+    console.log(`${this.setState.completedForm}`);
+    this.setState({completedForm: true});
+    event.preventDefault();
+  }.bind(this);
+
     render() {
       this.inputData = [
         {placeholder: 'Color', prop: 'colorOne', state: this.state.colorOne},
@@ -68,7 +75,8 @@ class madLibsForm extends Component {
       ]
       return (
         <div className="card-wrapper">
-          <Card>          
+          <Card>        
+            <form onSubmit={this.handleSubmit} id="madlib-form">  
             <Row style={{textAlign: "center", color: "white"}}>
               {
                 _.map(this.inputData, (data,indexKey) => {
@@ -76,6 +84,12 @@ class madLibsForm extends Component {
                 })
                 }
             </Row>
+            <Row>
+              <Col md="12" className="button-wrapper">
+              <input type="submit" className="generate-button" value="Generate Mad Lib" />
+              </Col>
+            </Row>
+            </form>
           </Card>
         </div>
       );

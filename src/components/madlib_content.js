@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 class MadLibContent extends Component { //defines React component, props established with this.props
     render(){
         const data = this.props.data;
+        const completed = this.props.completedForm;
         return (
-            <div className="content-wrapper">
+            <div className={data.completedForm ? 'showContent' : 'hideContent'}>
+                <div className="contentWrapper">
                 The ocean was <b>{data.colorOne}</b>, a deeper <b>{data.colorOne}</b> than <b>{data.celebOne}</b> had ever seen before. Above the 
                 surf, a group of <b>{data.adjOne}</b> <b>{data.pluralNounOne}</b> flew and hooted softly. How could this have happened? <b>{data.celebOne}</b> felt <b>{data.adjTwo}</b>, like a 
                 big <b>{data.adjTwo}</b> <b>{data.nounOne}</b>. It was as if <b>{data.numOne}</b> separate gnats came in and buzzed, one 
@@ -19,6 +21,7 @@ class MadLibContent extends Component { //defines React component, props establi
                 spilled <b>{data.celebOne}</b>'s cup of <b>{data.liquidOne}</b> all over 
                 the interior! <b>{data.celebOne}</b> was <b>{data.adjFour}</b>, and <b>{data.adverbTwo}</b> kicked <b>{data.animalOne}</b> out 
                 of his car. Still, <b>{data.celebOne}</b> felt better and drove off.
+                </div>
             </div>
         )
     }

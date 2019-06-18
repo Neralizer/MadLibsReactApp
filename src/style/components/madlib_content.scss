@@ -11,3 +11,18 @@
     padding: 42px;
     margin-top: -22px;
 }
+
+.black-label {
+    background-color: black;
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    margin: 5px;
+}
+
+.bold-effect {
+    color: $clearBlue;
+}

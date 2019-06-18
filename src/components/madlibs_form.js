@@ -109,30 +109,30 @@ class madLibsForm extends Component {
 
     render() {
       this.inputData = [
-        {placeholder: 'Color', prop: 'colorOne', state: this.state.colorOne},
-        {placeholder: 'Celebrity', prop: 'celebOne', state: this.state.celebOne},
-        {placeholder: 'Noun(Plural)', prop: 'pluralNounOne', state: this.state.pluralNounOne},
-        {placeholder: 'Adjective', prop: 'adjOne', state: this.state.adjOne},
+        {placeholder: 'Color', prop: 'colorOne', id: '1', state: this.state.colorOne},
+        {placeholder: 'Celebrity', prop: 'celebOne', id: '2', state: this.state.celebOne},
+        {placeholder: 'Noun(Plural)', prop: 'pluralNounOne', id: '3', state: this.state.pluralNounOne},
+        {placeholder: 'Adjective', prop: 'adjOne', id: '4', state: this.state.adjOne},
 
-        {placeholder: 'Adjective', prop: 'adjTwo', state: this.state.adjTwo},
-        {placeholder: 'Noun', prop: 'nounOne', state: this.state.nounOne},
-        {placeholder: 'Number', prop: 'numOne', state: this.state.numOne},
-        {placeholder: 'Number', prop: 'numTwo', state: this.state.numTwo},
+        {placeholder: 'Adjective', prop: 'adjTwo', id: '5', state: this.state.adjTwo},
+        {placeholder: 'Noun', prop: 'nounOne', id: '6', state: this.state.nounOne},
+        {placeholder: 'Number', prop: 'numOne', id: '7', state: this.state.numOne},
+        {placeholder: 'Number', prop: 'numTwo', id: '8', state: this.state.numTwo},
 
-        {placeholder: 'Noun(Plural)', prop: 'pluralNounTwo', state: this.state.pluralNounTwo},
-        {placeholder: 'Verb', prop: 'verbOne', state: this.state.verbOne},
-        {placeholder: 'Adverb', prop: 'adverbOne', state: this.state.adverbOne},
-        {placeholder: 'Noun', prop: 'nounTwo', state: this.state.nounTwo},
+        {placeholder: 'Noun(Plural)', prop: 'pluralNounTwo', id: '9', state: this.state.pluralNounTwo},
+        {placeholder: 'Verb', prop: 'verbOne', id: '10', state: this.state.verbOne},
+        {placeholder: 'Adverb', prop: 'adverbOne', id: '11', state: this.state.adverbOne},
+        {placeholder: 'Noun', prop: 'nounTwo', id: '12', state: this.state.nounTwo},
 
-        {placeholder: 'Adjective', prop: 'adjThree', state: this.state.adjThree},
-        {placeholder: 'Verb', prop: 'verbTwo', state: this.state.verbTwo},
-        {placeholder: 'Animal', prop: 'animalOne', state: this.state.animalOne},
-        {placeholder: 'First Name', prop: 'firstNameOne', state: this.state.firstNameOne},
+        {placeholder: 'Adjective', prop: 'adjThree', id: '13', state: this.state.adjThree},
+        {placeholder: 'Verb', prop: 'verbTwo', id: '14', state: this.state.verbTwo},
+        {placeholder: 'Animal', prop: 'animalOne', id: '15', state: this.state.animalOne},
+        {placeholder: 'First Name', prop: 'firstNameOne', id: '16', state: this.state.firstNameOne},
 
-        {placeholder: 'Liquid', prop: 'liquidOne', state: this.state.liquidOne},
-        {placeholder: 'Car Brand', prop: 'carBrandOne', state: this.state.carBrandOne},
-        {placeholder: 'Adjective', prop: 'adjFour', state: this.state.adjFour},
-        {placeholder: 'Adverb', prop: 'adverbTwo', state: this.state.adverbTwo}
+        {placeholder: 'Liquid', prop: 'liquidOne', id: '17', state: this.state.liquidOne},
+        {placeholder: 'Car Brand', prop: 'carBrandOne', id: '18', state: this.state.carBrandOne},
+        {placeholder: 'Adjective', prop: 'adjFour', id: '19', state: this.state.adjFour},
+        {placeholder: 'Adverb', prop: 'adverbTwo', id: '20', state: this.state.adverbTwo}
       ]
       return (
         <div className="card-wrapper">

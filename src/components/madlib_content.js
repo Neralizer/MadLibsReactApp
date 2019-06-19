@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class MadLibContent extends Component { //defines React component, props established with this.props
     render(){
-        const data = this.props.data;
+        const data = this.props.data; 
         const completed = this.props.completedForm;
         return (
             <div className={data.completedForm ? 'showContent' : 'hideContent'}>
@@ -27,7 +27,7 @@ class MadLibContent extends Component { //defines React component, props establi
         )
         }
 
-        renderLabel = function(state) {
+        renderLabel = function(state, id) {
             const data = this.props.data;
             return (
                 <span>

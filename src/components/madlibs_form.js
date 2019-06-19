@@ -141,7 +141,7 @@ class madLibsForm extends Component {
               <Row style={{textAlign: "center", color: "white"}}>
                 {
                   _.map(this.inputData, (data,indexKey) => {
-                    return <MadLibInput key={indexKey} index={indexKey + 1} state={data.state} placeholder={data.placeholder} onChange={this.handleChange({inputTitle: data.prop})} />
+                    return <MadLibInput key={indexKey} index={indexKey + 1} id={data.id} state={data.state} placeholder={data.placeholder} onChange={this.handleChange({inputTitle: data.prop})} />
                   })
                 }
               </Row>
